@@ -1,8 +1,9 @@
 // Credit to: Spencer (data structure) http://www.hexperiments.com/?page_id=47
 // Credit to: chimera (Original Logic) - https://www.geekzone.co.nz/forums.asp?forumid=141&topicid=195424
 // Credit to: millst (TX/RX on the same pin) - https://www.geekzone.co.nz/forums.asp?forumid=141&topicid=195424&page_no=2#2982537
-// Using non 5v version of Arduino https://www.instructables.com/HRV-Wireless/
-// Credit to durankeeley: version with sending serial code - https://github.com/durankeeley/hrv-ESP8266
+// Credit to: chimera Nicely documented using non 5v version of Arduino https://www.instructables.com/HRV-Wireless/
+// Credit to: durankeeley Version with sending serial code - https://github.com/durankeeley/hrv-ESP8266
+// Credit to: lastminuteengineers.com (Fetch NTP time)    https://lastminuteengineers.com/esp32-ntp-server-date-time-tutorial/
 
 
 #include <ESP8266WiFi.h>
