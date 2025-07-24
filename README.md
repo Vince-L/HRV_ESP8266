@@ -63,15 +63,17 @@ This code is designed for a typical **ESP8266 NodeMCU** or **Wemos D1** (or simi
 - Connect the HRV data line to the **D6** pin. 
 - Connect the LCD to pins 4 (SDA) and 5 (SCL) and GND (if not using the 2n7000) and +3.3V
 - Connect the optional 2N7000 to reset the display if it get corrupted.
--   Pin 1 = GND, Pin 2 goes to D3 and Pin 3 goes to GND on the LCD    
+-   Pin 1 = GND, Pin 2 goes to D3 and Pin 3 goes to GND on the LCD
+-   ```cpp   
      _______
     |       |  
     |2N7000 |
     |_______|
-	 \|_|_|/
+     \|_|_|/
       | | |
       | | | 
       1 2 3
+    ```
 ---
 
 ## Software Requirements
