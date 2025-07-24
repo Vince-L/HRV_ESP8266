@@ -1,6 +1,6 @@
-# Wi-Fi Enabled Heat Recovery Ventilator (HRV) Controller
+# New Zealand Heat Recovery Ventilator (HRV) Controller replacement
 
-This project replaces the stock control panel of a Heat Recovery Ventilator (HRV) system with a Wi-Fi–enabled ESP8266 module. It continuously exchanges stale indoor air with fresh outdoor air, providing a healthier, cleaner, and more comfortable home environment.
+This project replaces the stock control panel of a Heat Recovery Ventilator (HRV) system with a ESP8266 module, LCD display and customizable fan control logic.
 ---
 
 ## Table of Contents
