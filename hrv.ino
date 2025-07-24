@@ -42,7 +42,7 @@ const int   daylightOffset_sec = 0000;
 // Pin definitions
 #define D6 (12)
 
-
+const uint8_t LCD_2N7000 = D3;
 
 char         packetBuffer[255];
 int          iTotalDelay = 0;
@@ -82,7 +82,7 @@ unsigned long previousReadMillis = 0;
 unsigned long previousLCDResetMillis = 0;
 
 const unsigned long SERIAL_READ_INTERVAL = 10000;      // 10 seconds
-const unsigned long LCD_RESET_INTERVAL = 1800000;    // 30 mins
+const unsigned long LCD_RESET_INTERVAL =  10800000;    // 3 Hours
 
 SoftwareSerial hrvSerial;
 
@@ -121,6 +121,8 @@ void setup()
   char  buff[100];
   int   iTries = 0;
 
+  pinMode(LCD_2N7000, OUTPUT);
+  digitalWrite(LCD_2N7000, HIGH);
    
   Serial.begin(115200);
   Serial.println(F("Booting..."));
@@ -250,6 +252,13 @@ void loop() {
   if ( currentMillis - previousLCDResetMillis >= LCD_RESET_INTERVAL ) 
   {
     previousLCDResetMillis = currentMillis;
+
+    Serial.println("Switching OFF LCD");
+    digitalWrite(LCD_2N7000, LOW);
+    myDelay(5000);
+    Serial.println("Switching ON LCD");
+    digitalWrite(LCD_2N7000, HIGH);
+    myDelay(2000);
 
     ResetLCD();
 
@@ -708,7 +717,7 @@ void loop() {
 
 void ResetLCD()
 {
-   display.begin();
+  display.begin();
   display.setContrast(140);
   display.clearBuffer();
 
