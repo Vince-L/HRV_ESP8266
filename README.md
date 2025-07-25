@@ -1,4 +1,4 @@
-# New Zealand Heat Recovery Ventilator (HRV) Controller replacement
+# NZ Heat Recovery Ventilator (HRV) Controller replacement
 
 This project replaces the stock control panel of a Heat Recovery Ventilator (HRV) system with a ESP8266 module, LCD display and customizable fan control logic.
 ---
@@ -19,7 +19,10 @@ This project replaces the stock control panel of a Heat Recovery Ventilator (HRV
 
 ## Overview
 
-A Heat Recovery Ventilator (HRV) helps maintain fresh indoor air. This project demonstrates how to replace the HRV's existing control panel with an ESP8266-based controller. The controller communicates with the HRV via a single data line (half-duplex), reads the temperature from the HRV sensors, and publishes the data to the LCD screen. The fan speed is controlled using custom logic to just warm the house in winter and cool it in summer, no more blowing cold air in all night in winter.
+A Heat Recovery Ventilator (HRV) helps maintain fresh indoor air. 
+This project demonstrates how to replace the HRV's existing control panel with an ESP8266-based controller. 
+The controller communicates with the HRV via a single data line (half-duplex), reads the temperature from the HRV sensors, and publishes the data to the LCD screen. 
+The fan speed is controlled using custom logic to just warm the house in winter and cool it in summer, no more blowing cold air in all night in winter.
 ---
 
 ## Features
@@ -109,11 +112,9 @@ This code is designed for a typical **ESP8266 NodeMCU** or **Wemos D1** (or simi
 
 1. **Install Libraries**: Make sure and [SoftwareSerial](https://www.arduino.cc/en/Reference/softwareSerial) is installed.  
 2. **Update `secrets.h`**:
-
-   
+ ```cpp   
    const char* ssid         = "YOUR_WIFI_SSID";
    const char* password     = "YOUR_WIFI_PASSWORD";
-
    ```
 3. **Pin Configuration**: By default, the code uses `D6` for the HRV data line, Pin 4 and 5 for the ST7567_JLX12864 LCD screen and Pin 3 for the optional 2N7000 to reset the LCD every 3 hours. If you want to change this, update the definition in the code
    ```cpp
